@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET Launch (WebApi)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build WebApi",
+      "program": "${workspaceFolder}/src/WebApi/bin/Debug/net8.0/WebApi.dll",
+      "cwd": "${workspaceFolder}/src/WebApi",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}

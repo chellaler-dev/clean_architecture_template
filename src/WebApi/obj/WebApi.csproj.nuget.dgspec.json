@@ -1,17 +1,255 @@
 {
   "format": 1,
   "restore": {
-    "/home/chellaler/Desktop/repos/clean_architecture_template/src/WebApi/WebApi.csproj": {}
+    "/home/chellaler/repos/clean_architecture_template/src/WebApi/WebApi.csproj": {}
   },
   "projects": {
-    "/home/chellaler/Desktop/repos/clean_architecture_template/src/WebApi/WebApi.csproj": {
+    "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chellaler/Desktop/repos/clean_architecture_template/src/WebApi/WebApi.csproj",
-        "projectName": "WebApi",
-        "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/WebApi/WebApi.csproj",
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj",
         "packagesPath": "/home/chellaler/.nuget/packages/",
-        "outputPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/WebApi/obj/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/chellaler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj"
+              },
+              "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[13.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj",
+        "packagesPath": "/home/chellaler/.nuget/packages/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/chellaler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/home/chellaler/.nuget/packages/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/chellaler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj"
+              },
+              "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj"
+              },
+              "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj",
+        "projectName": "SharedKernel",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj",
+        "packagesPath": "/home/chellaler/.nuget/packages/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chellaler/.nuget/NuGet/NuGet.Config"
@@ -38,6 +276,82 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[13.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/chellaler/repos/clean_architecture_template/src/WebApi/WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/WebApi/WebApi.csproj",
+        "projectName": "WebApi",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/WebApi/WebApi.csproj",
+        "packagesPath": "/home/chellaler/.nuget/packages/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/WebApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/chellaler/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj"
+              },
+              "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj"
+              },
+              "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj"
+              },
+              "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.0.0, )"
@@ -50,9 +364,15 @@
               "target": "Package",
               "version": "[13.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

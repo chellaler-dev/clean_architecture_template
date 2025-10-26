@@ -1,0 +1,11 @@
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/bin/Debug/net8.0/SharedKernel.dll
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/bin/Debug/net8.0/SharedKernel.pdb
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.csproj.AssemblyReference.cache
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.AssemblyInfoInputs.cache
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.AssemblyInfo.cs
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.csproj.CoreCompileInputs.cache
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.sourcelink.json
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.dll
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/refint/SharedKernel.dll
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.pdb

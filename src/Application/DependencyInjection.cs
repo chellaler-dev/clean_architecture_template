@@ -8,6 +8,7 @@ namespace Application;
 
 public static class DependencyInjection
 {
+    // Convenience method
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         var assembly = Assembly.GetExecutingAssembly();

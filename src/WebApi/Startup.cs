@@ -1,5 +1,5 @@
 ﻿using Application;
-using Application.Database;
+using Infrastructure;
 using Microsoft.OpenApi.Models;
 
 namespace WebApi;
@@ -20,11 +20,9 @@ public class Startup
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "clean_Architecture_template", Version = "v1" });
         });
-
-        services.AddSingleton<Repository>();
         
         services.AddApplication();
-
+        services.AddInfrastructure(Configuration);
         services.AddControllers();
     }
 
@@ -46,5 +44,6 @@ public class Startup
         {
             endpoints.MapControllers();
         });
+
     }
 }
