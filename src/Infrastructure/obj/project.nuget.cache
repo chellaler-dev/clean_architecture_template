@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9w0dQi8fcFM=",
+  "dgSpecHash": "THkgotah3r2Amh1YKjTeH7VHPpnFuMGKB0HxtdlPHN4HDwOU5FTm80Bn8x6mK8GW+tWo0jIER6TnElEHeIsvWQ==",
   "success": true,
-  "projectFilePath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
+  "projectFilePath": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/chellaler/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
     "/home/chellaler/.nuget/packages/efcore.namingconventions/8.0.3/efcore.namingconventions.8.0.3.nupkg.sha512",

@@ -1,11 +1,16 @@
+/home/chellaler/repos/clean_architecture_template/src/Domain/bin/Debug/net8.0/Domain.deps.json
 /home/chellaler/repos/clean_architecture_template/src/Domain/bin/Debug/net8.0/Domain.dll
 /home/chellaler/repos/clean_architecture_template/src/Domain/bin/Debug/net8.0/Domain.pdb
+/home/chellaler/repos/clean_architecture_template/src/Domain/bin/Debug/net8.0/SharedKernel.dll
+/home/chellaler/repos/clean_architecture_template/src/Domain/bin/Debug/net8.0/SharedKernel.pdb
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.csproj.CopyComplete
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.dll
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/refint/Domain.dll
 /home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/Domain.pdb
+/home/chellaler/repos/clean_architecture_template/src/Domain/obj/Debug/net8.0/ref/Domain.dll

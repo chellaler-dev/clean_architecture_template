@@ -9,3 +9,5 @@
 /home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.dll
 /home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/refint/SharedKernel.dll
 /home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/SharedKernel.pdb
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/bin/Debug/net8.0/SharedKernel.deps.json
+/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/Debug/net8.0/ref/SharedKernel.dll

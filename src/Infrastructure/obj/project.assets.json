@@ -3051,17 +3051,17 @@
     "Application/1.0.0": {
       "type": "project",
       "path": "../Application/Application.csproj",
-      "msbuildProject": "../../../../../repos/clean_architecture_template/src/Application/Application.csproj"
+      "msbuildProject": "../Application/Application.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../../../../../repos/clean_architecture_template/src/Domain/Domain.csproj"
+      "msbuildProject": "../Domain/Domain.csproj"
     },
     "SharedKernel/1.0.0": {
       "type": "project",
       "path": "../SharedKernel/SharedKernel.csproj",
-      "msbuildProject": "../../../../../repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+      "msbuildProject": "../SharedKernel/SharedKernel.csproj"
     }
   },
   "projectFileDependencyGroups": {

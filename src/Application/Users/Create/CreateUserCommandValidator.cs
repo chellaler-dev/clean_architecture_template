@@ -2,7 +2,7 @@
 
 namespace Application.Users.Create;
 
-internal sealed class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
+public sealed class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
 {
     public CreateUserCommandValidator()
     {
