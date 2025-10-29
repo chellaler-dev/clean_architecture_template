@@ -1,8 +1,7 @@
 using System.Reflection;
-using Application.Behaviours;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-
+using Application.Behaviors;
 
 namespace Application;
 

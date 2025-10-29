@@ -1,37 +1,39 @@
-﻿using MediatR;
-using System.Diagnostics;
+﻿﻿using MediatR;
 using Microsoft.Extensions.Logging;
-namespace Application.Behaviours;
-    public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : MediatR.IRequest<TResponse>
+using Serilog.Context;
+using SharedKernel;
+
+namespace Application.Behaviors;
+
+internal sealed class LoggingBehaviour<TRequest, TResponse>(
+    ILogger<LoggingBehaviour<TRequest, TResponse>> logger)
+    : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : class
+    where TResponse : Result
+{
+    public async Task<TResponse> Handle(
+        TRequest request,
+        RequestHandlerDelegate<TResponse> next,
+        CancellationToken cancellationToken)
     {
-        private readonly ILogger <LoggingBehaviour<TRequest, TResponse>> _logger;
-        
-        
-        public LoggingBehaviour(ILogger<LoggingBehaviour<TRequest, TResponse>> logger) 
-        { 
-            
-            this._logger = logger;
-        }
+        string requestName = typeof(TRequest).Name;
 
-        
-        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+        logger.LogInformation("Processing request {RequestName}", requestName);
+
+        TResponse result = await next();
+
+        if (result.IsSuccess)
         {
-
-            // Pre Logic
-            var requestName = request.GetType();
-            _logger.LogInformation("{Request} is starting.", requestName);
-
-            var timer = Stopwatch.StartNew();
-
-            var response = await next();
-            
-            timer.Stop();
-
-            // Post Logic
-            _logger.LogInformation("{Request} has finished in {Time}ms.", requestName, timer.ElapsedMilliseconds);
-
-
-            return response;
+            logger.LogInformation("Completed request {RequestName}", requestName);
         }
-    }
+        else
+        {
+            using (LogContext.PushProperty("Error", result.Error, true))
+            {
+                logger.LogError("Completed request {RequestName} with error", requestName);
+            }
+        }
 
+        return result;
+    }
+}
