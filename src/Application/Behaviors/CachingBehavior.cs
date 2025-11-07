@@ -1,13 +1,12 @@
 using Application.Abstractions.Caching;
 using MediatR;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using SharedKernel;
 
 namespace Application.Behaviors;
 
 internal sealed class CachingBehavior<TRequest, TResponse>(
-    IMemoryCache memoryCache,
+    ICacheService cacheService,
     ILogger<CachingBehavior<TRequest, TResponse>> logger)
     : IPipelineBehavior<TRequest, TResponse>
     where TRequest : ICachedQuery
@@ -21,10 +20,12 @@ internal sealed class CachingBehavior<TRequest, TResponse>(
         string cacheKey = request.CacheKey;
         string requestName = typeof(TRequest).Name;
 
-        if (memoryCache.TryGetValue(cacheKey, out TResponse? cachedResult))
+        // Try to get from cache
+        TResponse? cachedResult = await cacheService.GetAsync<TResponse>(cacheKey, cancellationToken);
+        if (cachedResult is not null)
         {
             logger.LogInformation("Cache hit for {RequestName}", requestName);
-            return cachedResult!;
+            return cachedResult;
         }
 
         logger.LogInformation("Cache miss for {RequestName}", requestName);
@@ -33,13 +34,7 @@ internal sealed class CachingBehavior<TRequest, TResponse>(
 
         if (result.IsSuccess)
         {
-            // Set cache options (e.g., absolute expiration)
-            var cacheEntryOptions = new MemoryCacheEntryOptions
-            {
-                AbsoluteExpirationRelativeToNow = request.Expiration
-            };
-
-            memoryCache.Set(cacheKey, result, cacheEntryOptions);
+            await cacheService.SetAsync(cacheKey, result, request.Expiration, cancellationToken);
         }
 
         return result;
