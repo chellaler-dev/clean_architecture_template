@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sGfJDP38CWdVj97i6TOH668sYOrTqLFsfDQxjytHq4Dxxpq8AEadKwQtehqwnWvDUDG5r0P4ST7H9uw23vCoQQ==",
+  "dgSpecHash": "O/1fsFFaZmqzhfrDiWqEOGnhaREWchvA7J3WKN/4NexVL16r4lmI6K0BAWE0EY/Scv95tk5GhznNoBNwG11wyw==",
   "success": true,
   "projectFilePath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj",
   "expectedPackageFiles": [

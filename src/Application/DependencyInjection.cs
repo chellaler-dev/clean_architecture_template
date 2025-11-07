@@ -17,9 +17,11 @@ public static class DependencyInjection
             config.RegisterServicesFromAssembly(assembly);
             config.AddOpenBehavior(typeof(LoggingBehaviour<,>));
             config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+            config.AddOpenBehavior(typeof(CachingBehavior<,>));
         });
 
         services.AddValidatorsFromAssembly(assembly);
+        services.AddMemoryCache();
 
         return services;
     }

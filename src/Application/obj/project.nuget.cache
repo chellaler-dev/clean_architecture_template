@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AmFkEkQLKgcJRlyaY8sEC1dB8zY9d1eNUHgYqsxH6vOTEmj3hGkYU7Z9TYt/IhSjNxhaKfeaipOIS/jWUM8S2A==",
+  "dgSpecHash": "JXi2iaoJKpji4cBbAwJtyEaydk1VrsTuLnY9atVpln9h6V6hr1BT+LHB2W/eR2882Y1FIqL0WTzS1MTbEmWwAw==",
   "success": true,
   "projectFilePath": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "/home/chellaler/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.0.0/fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
     "/home/chellaler/.nuget/packages/mediatr/13.0.0/mediatr.13.0.0.nupkg.sha512",
     "/home/chellaler/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.10/microsoft.extensions.caching.abstractions.9.0.10.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.extensions.caching.memory/9.0.10/microsoft.extensions.caching.memory.9.0.10.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.10/microsoft.extensions.dependencyinjection.9.0.10.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.10/microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.extensions.logging/9.0.10/microsoft.extensions.logging.9.0.10.nupkg.sha512",

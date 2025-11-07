@@ -1,8 +1,8 @@
-﻿using Application.Abstractions.Messaging;
+﻿using Application.Abstractions.Caching;
 
 namespace Application.Users.GetById;
 
-public sealed record GetUserByIdQuery(Guid UserId) : IQuery<UserResponse>
+public sealed record GetUserByIdQuery(Guid UserId) : ICachedQuery<UserResponse>
 {
     public string CacheKey => $"user-by-id-{UserId}";
 

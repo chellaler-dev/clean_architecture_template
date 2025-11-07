@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qG9m/xG9uH2zMARyUY7IJlSNWePC7/kr0mEiFlhYvtea1R0S9epulXXfDQXfA+9mRBBryWB4Joa10bP3iT7tEw==",
+  "dgSpecHash": "WG1y/TbJ9vFtcwK9RoYhzEkR8FjgvagCTf2ZNDqS/qOguE8hZbsB4c/x4Ojiw/eSxHnb3eqvwLlv+b+JpJbDJw==",
   "success": true,
   "projectFilePath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj",
   "expectedPackageFiles": [

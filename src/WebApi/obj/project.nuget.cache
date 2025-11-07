@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lOyyO1EhsGzPZVi88Wi6MHGeR2LfAV/1nS5UnShnDG+LpMhkf1IlQTDjz0TUhuCQ5y+buozbSvheGeO4H2NZdg==",
+  "dgSpecHash": "Ze6T0vQDWb4KzvUeilfzfghkQ/iwUcMxg/iGvDCBGUAqOMCmaj35IoP218/G2HV1XgsCp3ktTnaZdrAfkLh4iA==",
   "success": true,
   "projectFilePath": "/home/chellaler/repos/clean_architecture_template/src/WebApi/WebApi.csproj",
   "expectedPackageFiles": [
@@ -16,8 +16,8 @@
     "/home/chellaler/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.2/microsoft.entityframeworkcore.analyzers.8.0.2.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.2/microsoft.entityframeworkcore.relational.8.0.2.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "/home/chellaler/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
-    "/home/chellaler/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.10/microsoft.extensions.caching.abstractions.9.0.10.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.extensions.caching.memory/9.0.10/microsoft.extensions.caching.memory.9.0.10.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.extensions.configuration.fileextensions/8.0.0/microsoft.extensions.configuration.fileextensions.8.0.0.nupkg.sha512",

@@ -64,3 +64,5 @@
 /home/chellaler/repos/clean_architecture_template/src/WebApi/obj/Debug/net8.0/WebApi.pdb
 /home/chellaler/repos/clean_architecture_template/src/WebApi/obj/Debug/net8.0/WebApi.genruntimeconfig.cache
 /home/chellaler/repos/clean_architecture_template/src/WebApi/obj/Debug/net8.0/ref/WebApi.dll
+/home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+/home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
