@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http.Features;
-using Microsoft.IdentityModel.Tokens;
 using WebApi.ExceptionHandlers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Text;
-using Application;
 using Infrastructure;
 using Microsoft.OpenApi.Models;
+using WebApi.OptionsSetup;
 
 namespace WebApi.Config;
 
@@ -74,21 +72,10 @@ public static class ConfigureServices
 
     private static void AddJwtAuthentication(this WebApplicationBuilder builder)
     {
+        builder.Services.ConfigureOptions<JwtOptionsSetup>();
+        builder.Services.ConfigureOptions<JwtBearerOptionsSetup>();
+
         builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new()
-                {
-                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                    ValidAudience = builder.Configuration["Jwt:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]
-                            ?? throw new InvalidOperationException("Missing Jwt:SecretKey"))),
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true
-                };
-            });
+            .AddJwtBearer();
     }
 }
