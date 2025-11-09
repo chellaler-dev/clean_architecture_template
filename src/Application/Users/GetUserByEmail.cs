@@ -1,11 +1,17 @@
-﻿using System.Data;
+﻿using Application.Abstractions.Messaging;
+using System.Data;
 using Application.Abstractions.Data;
-using Application.Abstractions.Messaging;
 using Dapper;
 using Domain.Users;
 using SharedKernel;
 
+
+
 namespace Application.Users.GetByEmail;
+
+public sealed record GetUserByEmailQuery(string Email) : IQuery<UserResponse>;
+
+
 
 internal sealed class GetUserByEmailQueryHandler(IDbConnectionFactory factory)
     : IQueryHandler<GetUserByEmailQuery, UserResponse>
@@ -36,4 +42,16 @@ internal sealed class GetUserByEmailQueryHandler(IDbConnectionFactory factory)
 
         return user;
     }
+}
+
+
+public sealed record UserResponse
+{
+    public Guid Id { get; init; }
+
+    public string Email { get; init; }
+
+    public string Name { get; init; }
+
+    public bool HasPublicProfile { get; init; }
 }

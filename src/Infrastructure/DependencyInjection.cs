@@ -1,7 +1,9 @@
-﻿using Application.Abstractions.Caching;
+﻿using Application.Abstractions.Authentication;
+using Application.Abstractions.Caching;
 using Application.Abstractions.Data;
 using Dapper;
 using Domain.Users;
+using Infrastructure.Authentication;
 using Infrastructure.Caching;
 using Infrastructure.Data;
 using Infrastructure.Database;
@@ -21,7 +23,7 @@ public static class DependencyInjection
         this IServiceCollection services,
         IConfiguration configuration) =>
         services.AddDatabase(configuration).
-        AddCaching(configuration);
+        AddCaching(configuration).AddAuthentication();
 
     // Convenience method
     private static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
@@ -67,16 +69,44 @@ public static class DependencyInjection
         services.AddMemoryCache();
         services.AddSingleton<ICacheService, MemoryCacheService>();
 
-
         // For distributed caching (e.g., Redis)
         // string redisConnectionString = configuration.GetConnectionString("Cache")!;
 
-        // services.AddStackExchangeRedisCache(options => options.Configuration = redisConnectionString);
+        // Via Configuration
+        // services.AddStackExchangeRedisCache(options => options.Configuration = redisConnectionString)
 
         // services.AddSingleton<ICacheService, DistributedCacheService>();
 
         return services;
     }
 
+    private static IServiceCollection AddAuthentication(this IServiceCollection services)
+    {
+        services.AddScoped<IJwtProvider, JwtProvider>();
+        return services;
+    }
+
 
 }
+
+/* 
+Via ConnectionMultiplexer: 
+
+    // IConnectionMultiplexer connectionMultiplexer = ConnectionMultiplexer.Connect(redisConnectionString);
+    // builder.Services.AddSingleton(connectionMultiplexer);
+
+    // builder.Services.AddStackExchangeRedisCache(options =>
+    // {
+    //     options.ConnectionMultiplexerFactory =
+    //         () => Task.FromResult(connectionMultiplexer);
+    // });
+
+
+ConnectionMultiplexer (as a "factory"): 
+    - Provides direct, fine-grained control over your Redis connection, 
+    - suitable for advanced scenarios or when you need to interact with multiple databases or features beyond basic caching (e.g., Pub/Sub, transactions).
+    - explicitly managing its lifecycle.
+Configuration (via AddStackExchangeRedisCache): 
+    - Offers a higher-level abstraction for common caching needs, simplifying setup and integration with IDistributedCache. 
+    - It handles the ConnectionMultiplexer internally.
+*/

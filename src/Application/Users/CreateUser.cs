@@ -1,9 +1,27 @@
-﻿using Application.Abstractions.Data;
+using Application.Abstractions.Data;
 using Application.Abstractions.Messaging;
 using Domain.Users;
+using FluentValidation;
 using SharedKernel;
 
 namespace Application.Users.Create;
+
+public sealed record CreateUserRequest(string Email, string Name, bool HasPublicProfile);
+public sealed record CreateUserCommand(string Email, string Name, bool HasPublicProfile)
+    : ICommand<Guid>;
+
+public sealed class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
+{
+    public CreateUserCommandValidator()
+    {
+        RuleFor(c => c.Name)
+            .NotEmpty().WithErrorCode(UserErrorCodes.CreateUser.MissingName);
+
+        RuleFor(c => c.Email)
+            .NotEmpty().WithErrorCode(UserErrorCodes.CreateUser.MissingEmail)
+            .EmailAddress().WithErrorCode(UserErrorCodes.CreateUser.InvalidEmail);
+    }
+}
 
 internal sealed class CreateUserCommandHandler(
     IUserRepository userRepository,
@@ -35,3 +53,4 @@ internal sealed class CreateUserCommandHandler(
         return user.Id;
     }
 }
+

@@ -20,4 +20,9 @@ internal sealed class UserRepository(ApplicationDbContext context) : IUserReposi
     {
         context.Users.Add(user);
     }
+
+    public Task<User?> FindByEmailAsync(Email email)
+    {
+        return context.Users.FirstOrDefaultAsync(u => u.Email == email, CancellationToken.None);
+    }
 }

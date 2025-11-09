@@ -66,3 +66,7 @@
 /home/chellaler/repos/clean_architecture_template/src/WebApi/obj/Debug/net8.0/ref/WebApi.dll
 /home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
 /home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+/home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/chellaler/repos/clean_architecture_template/src/WebApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

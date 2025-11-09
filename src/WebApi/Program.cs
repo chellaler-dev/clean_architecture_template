@@ -1,18 +1,50 @@
+using System.Text;
 using Application;
 using Application.Users.Create;
 using Application.Users.GetById;
+using Application.Users.Login;
 using Infrastructure;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using SharedKernel;
 using WebApi.ExceptionHandlers;
 
+
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    // Add JWT authentication to Swagger
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter JWT token obtained from login (without 'Bearer ' prefix)"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 
 builder.Services.AddApplication();
@@ -37,6 +69,28 @@ builder.Services.AddProblemDetails(options =>
 builder.Services.AddExceptionHandler<ValidationExceptionHandler>();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
+
+// Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new()
+        {
+            ValidIssuer = configuration["Jwt:Issuer"],
+            ValidAudience = configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]
+                    ?? throw new InvalidOperationException("Missing Jwt:SecretKey"))),
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true
+        };
+    });
+
+builder.Services.AddAuthorization();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -47,6 +101,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapGet("/", () => "Hello World!");
 
@@ -65,7 +123,7 @@ app.MapGet("users/{userId}", async (
     }
 
     return Results.NotFound();
-});
+}).RequireAuthorization();
 
 app.MapPost("users", async (
     CreateUserRequest request,
@@ -83,6 +141,24 @@ app.MapPost("users", async (
     {
         return Results.Created();
     }
+    return Results.BadRequest(result.Error);
+});
+
+
+app.MapPost("auth/login", async (
+    LoginRequest request,
+    ISender sender,
+    CancellationToken cancellationToken) =>
+{
+    var command = new LoginCommand(request.Email);
+
+    Result<string> result = await sender.Send(command, cancellationToken);
+
+    if (result.IsSuccess)
+    {
+        return Results.Ok(new { Token = result.Value });
+    }
+
     return Results.BadRequest(result.Error);
 });
 

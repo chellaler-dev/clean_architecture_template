@@ -1,4 +1,5 @@
-﻿using System.Data;
+using Application.Abstractions.Caching;
+using System.Data;
 using Application.Abstractions.Data;
 using Application.Abstractions.Messaging;
 using Dapper;
@@ -6,6 +7,13 @@ using Domain.Users;
 using SharedKernel;
 
 namespace Application.Users.GetById;
+
+public sealed record GetUserByIdQuery(Guid UserId) : ICachedQuery<UserResponse>
+{
+    public string CacheKey => $"user-by-id-{UserId}";
+
+    public TimeSpan? Expiration => null;
+}
 
 internal sealed class GetUserByIdQueryHandler(IDbConnectionFactory factory)
     : IQueryHandler<GetUserByIdQuery, UserResponse>
@@ -37,4 +45,15 @@ internal sealed class GetUserByIdQueryHandler(IDbConnectionFactory factory)
         // It will be converted automatically to a Result<UserResponse> via the implicit operator defined in the Result<T> class.
         return user;
     }
+}
+
+public sealed record UserResponse
+{
+    public Guid Id { get; init; }
+
+    public string Email { get; init; }
+
+    public string Name { get; init; }
+
+    public bool HasPublicProfile { get; init; }
 }

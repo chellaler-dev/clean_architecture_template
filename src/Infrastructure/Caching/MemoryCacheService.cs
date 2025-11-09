@@ -1,6 +1,18 @@
 using Application.Abstractions.Caching;
 using Microsoft.Extensions.Caching.Memory;
 
+/* 
+Pros and Cons of In-Memory Caching
+Pros:
+    Extremely fast
+    Simple to implement
+    No external dependencies
+Cons:
+    Cache data is lost if the server restarts
+    Limited to the memory (RAM) of a single server
+    Cache data is not shared across multiple instances of your application
+*/
+
 namespace Infrastructure.Caching;
 
 internal sealed class MemoryCacheService(IMemoryCache memoryCache) : ICacheService
