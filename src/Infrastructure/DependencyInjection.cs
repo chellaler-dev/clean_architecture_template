@@ -4,10 +4,12 @@ using Application.Abstractions.Data;
 using Dapper;
 using Domain.Users;
 using Infrastructure.Authentication;
+using Infrastructure.Authorization;
 using Infrastructure.Caching;
 using Infrastructure.Data;
 using Infrastructure.Database;
 using Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +25,9 @@ public static class DependencyInjection
         this IServiceCollection services,
         IConfiguration configuration) =>
         services.AddDatabase(configuration).
-        AddCaching(configuration).AddAuthentication();
+        AddCaching(configuration).
+        AddAuthentication().
+        AddCustomAuthorization();
 
     // Convenience method
     private static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
@@ -86,7 +90,16 @@ public static class DependencyInjection
         return services;
     }
 
+    private static IServiceCollection AddCustomAuthorization(this IServiceCollection services)
+    {
+        services.AddScoped<Application.Abstractions.Authorization.IAuthorizationService, AuthorizationService>();
 
+        services.AddTransient<IAuthorizationHandler, PermissionAuthorizationHandler>();
+
+        services.AddTransient<IAuthorizationPolicyProvider, PermissionAuthorizationPolicyProvider>();
+
+        return services;
+    }
 }
 
 /* 

@@ -1,6 +1,7 @@
 using Application.Users.Create;
 using Application.Users.GetById;
 using Application.Users.Login;
+using Domain.Permissions;
 using MediatR;
 using SharedKernel;
 
@@ -26,10 +27,10 @@ public static class UserEndpoints
             }
 
             return Results.NotFound();
-        }).RequireAuthorization();
-       
-       
-       
+        }).RequireAuthorization().RequireAuthorization(PermissionEnum.ReadUser.ToString());
+
+
+
         // Create User
         app.MapPost("users", async (
             CreateUserRequest request,

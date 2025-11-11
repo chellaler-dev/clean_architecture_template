@@ -13,7 +13,6 @@ builder.AddServices();
 
 var app = builder.Build();
 
-app.Configure();
-
+await app.Configure();
 
 app.Run();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/chellaler/Desktop/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj": {}
+    "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/chellaler/Desktop/repos/clean_architecture_template/src/Application/Application.csproj": {
+    "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Application/Application.csproj",
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Application/Application.csproj",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj",
         "packagesPath": "/home/chellaler/.nuget/packages/",
-        "outputPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Application/obj/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chellaler/.nuget/NuGet/NuGet.Config"
@@ -26,11 +26,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/Domain.csproj": {
-                "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/Domain.csproj"
+              "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj"
               },
-              "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
-                "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+              "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
               }
             }
           }
@@ -94,14 +94,14 @@
         }
       }
     },
-    "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/Domain.csproj": {
+    "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/Domain.csproj",
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/Domain.csproj",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj",
         "packagesPath": "/home/chellaler/.nuget/packages/",
-        "outputPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/obj/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chellaler/.nuget/NuGet/NuGet.Config"
@@ -116,8 +116,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
-                "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+              "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
               }
             }
           }
@@ -151,14 +151,14 @@
         }
       }
     },
-    "/home/chellaler/Desktop/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj": {
+    "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
         "packagesPath": "/home/chellaler/.nuget/packages/",
-        "outputPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Infrastructure/obj/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chellaler/.nuget/NuGet/NuGet.Config"
@@ -173,14 +173,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/chellaler/Desktop/repos/clean_architecture_template/src/Application/Application.csproj": {
-                "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Application/Application.csproj"
+              "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Application/Application.csproj"
               },
-              "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/Domain.csproj": {
-                "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/Domain/Domain.csproj"
+              "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/Domain/Domain.csproj"
               },
-              "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
-                "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
+              "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+                "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj"
               }
             }
           }
@@ -202,6 +202,14 @@
             "EFCore.NamingConventions": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -254,14 +262,14 @@
         }
       }
     },
-    "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
+    "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj",
+        "projectUniqueName": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj",
         "projectName": "SharedKernel",
-        "projectPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj",
+        "projectPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/SharedKernel.csproj",
         "packagesPath": "/home/chellaler/.nuget/packages/",
-        "outputPath": "/home/chellaler/Desktop/repos/clean_architecture_template/src/SharedKernel/obj/",
+        "outputPath": "/home/chellaler/repos/clean_architecture_template/src/SharedKernel/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/chellaler/.nuget/NuGet/NuGet.Config"

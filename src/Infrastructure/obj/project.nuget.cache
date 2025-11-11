@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BHSi8sJbRMCn4qAhTAMwwVnSY9+zWQAMcKNL093mVC2eeMPJF/gVXR1R+vCSfc9unzNUSjM/IUQJH5VBDKAhAw==",
+  "dgSpecHash": "NY1WhCxGIxf+y7oHr+eOg/hfAmlWIEiKAaQg5WElGsL16rnrv4NvtctmqXnOznqC0efHiOsPTkbF3zqF98N6Vw==",
   "success": true,
   "projectFilePath": "/home/chellaler/repos/clean_architecture_template/src/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,11 @@
     "/home/chellaler/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/chellaler/.nuget/packages/mediatr/13.0.0/mediatr.13.0.0.nupkg.sha512",
     "/home/chellaler/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.3.0/microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.aspnetcore.authorization/8.0.0/microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.3.0/microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.aspnetcore.http.features/2.3.0/microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
+    "/home/chellaler/.nuget/packages/microsoft.aspnetcore.metadata/8.0.0/microsoft.aspnetcore.metadata.8.0.0.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "/home/chellaler/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

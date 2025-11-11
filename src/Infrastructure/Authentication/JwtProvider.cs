@@ -23,6 +23,7 @@ internal sealed class JwtProvider : IJwtProvider
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new("userId", user.Id.ToString()), // Required for HasPermissionAsync
             new Claim(JwtRegisteredClaimNames.Email, user.Email.Value)
         };
 
